@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="لعبة تفاعلية: جريمة في ليلة الزفاف - فعالية عيد للدوام" />
+  <title>جريمة في ليلة الزفاف</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="hero">
+    <div class="hero-card">
+      <p class="eyebrow">فعالية العيد | ملف قضية تفاعلي</p>
+      <h1>جريمة في ليلة الزفاف</h1>
+      <p class="hero-text">في ليلة كان من المفترض أن تكون الأسعد… تحولت قاعة الزفاف إلى مسرح جريمة.</p>
+      <div class="stamp">قضية لم تُحل</div>
+      <button class="primary-btn" id="startBtn">افتح ملف القضية</button>
+    </div>
+  </header>
+
+  <main class="app hidden" id="app">
+    <nav class="topbar">
+      <div>
+        <strong>CASE FILE 302</strong>
+        <span>جريمة في ليلة الزفاف</span>
+      </div>
+      <button class="ghost-btn" id="resetBtn">إعادة البداية</button>
+    </nav>
+
+    <section class="case-intro panel">
+      <div>
+        <p class="eyebrow dark">ملخص القضية</p>
+        <h2>العروس اختفت قبل الزفة… ثم وُجدت في غرفة التجهيز</h2>
+        <p id="caseSummary"></p>
+      </div>
+      <div class="timer-box">
+        <span>وقت التحقيق</span>
+        <strong id="timer">45:00</strong>
+        <button class="secondary-btn" id="timerBtn">بدء العداد</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>📁 بيانات القضية</h2>
+      <div class="facts-grid" id="factsGrid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>🕵️‍♀️ المشتبه بهم</h2>
+      <p class="hint">اضغطي على كل بطاقة لكشف التفاصيل.</p>
+      <div class="card-grid" id="suspectsGrid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>🔎 الأدلة</h2>
+      <p class="hint">الأدلة تفتح بالضغط. بعض الأدلة قد تغيّر مسار التحقيق.</p>
+      <div class="card-grid" id="evidenceGrid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>🗣️ الشهادات</h2>
+      <div id="testimoniesList"></div>
+    </section>
+
+    <section class="panel accusation-panel">
+      <h2>⚖️ إرسال الاتهام</h2>
+      <label for="killerSelect">من هو القاتل؟</label>
+      <select id="killerSelect">
+        <option value="">اختاري المشتبه به</option>
+      </select>
+
+      <label for="motiveText">اكتبي الدافع وطريقة تنفيذ الجريمة:</label>
+      <textarea id="motiveText" rows="5" placeholder="مثال: القاتل هو... والدافع... والدليل الأقوى..."></textarea>
+
+      <button class="primary-btn" id="submitBtn">إرسال الاتهام</button>
+      <div class="result hidden" id="resultBox"></div>
+    </section>
+
+    <section class="panel lounge">
+      <h2>☕ ركن المحققات</h2>
+      <div class="lounge-grid" id="loungeGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    Designed for Eid Office Mystery Event
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
